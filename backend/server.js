@@ -27,7 +27,7 @@ app.get('/',(req,res)=>{
     res.send("Server is LIVE");
 })
 
-app.use('/api/inngest',serve({client:inngestHeaders,functions}))
+app.use('/api/inngest',serve({client:inngest,functions}))
 
 
 app.listen(PORT,(req,res)=>{
