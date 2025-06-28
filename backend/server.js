@@ -5,6 +5,7 @@ import connectDB from './configs/db.js';
 import {clerkMiddleware} from '@clerk/express';
 import {serve} from "inngest/express";
 import {inngest,functions} from './inngest/index.js'
+import showRouter from './routes/showRoutes.js';
 
 
 const app=express();
@@ -28,6 +29,7 @@ app.get('/',(req,res)=>{
 })
 
 app.use('/api/inngest',serve({client:inngest,functions}))
+//app.use('/api/show',showRouter);
 
 
 
