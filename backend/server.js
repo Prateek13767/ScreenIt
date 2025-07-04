@@ -29,7 +29,7 @@ app.get('/',(req,res)=>{
 })
 
 app.use('/api/inngest',serve({client:inngest,functions}))
-//app.use('/api/show',showRouter);
+app.use('/api/show',showRouter);
 
 
 
